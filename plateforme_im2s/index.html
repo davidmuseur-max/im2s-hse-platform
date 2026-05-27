@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plateforme HSE IM2S Protection Incendie — DUERP, cartographie des risques, plan d'action, audit interactif, bibliothèque documentaire.">
+  <title>Plateforme HSE — IM2S Protection Incendie</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo_im2s_professional.svg">
+  <link rel="alternate icon" type="image/jpeg" href="assets/img/logo_im2s.jpg">
+</head>
+<body>
+
+<button id="mobile-menu-btn" class="mobile-menu-btn">☰ Menu</button>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/img/logo_im2s_professional.svg" alt="Logo IM2S Protection Incendie" onerror="this.src='assets/img/logo_im2s.jpg'">
+      <h1>Plateforme HSE</h1>
+      <p>IM2S PROTECTION INCENDIE<br>Édition 2026 v2.2 ULTIME</p>
+    </div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a class="nav-item active" data-section="accueil" href="#accueil"><span class="icon">🏠</span>Accueil</a></li>
+        <li><a class="nav-item" data-section="societe" href="#societe"><span class="icon">🏢</span>Société</a></li>
+        <li><a class="nav-item" data-section="duerp" href="#duerp"><span class="icon">📋</span>DUERP — édition courante</a></li>
+        <li><a class="nav-item" data-section="biblio" href="#biblio"><span class="icon">📁</span>Bibliothèque documentaire</a></li>
+        <li><a class="nav-item" data-section="risques" href="#risques"><span class="icon">⚠️</span>Cartographie des risques</a></li>
+        <li><a class="nav-item" data-section="plan" href="#plan"><span class="icon">🎯</span>Plan d'action priorisé</a></li>
+        <li><a class="nav-item" data-section="kpi" href="#kpi"><span class="icon">📊</span>Indicateurs HSE</a></li>
+        <li><a class="nav-item" data-section="audit" href="#audit"><span class="icon">✅</span>Audit interactif</a></li>
+        <li><a class="nav-item" data-section="chantiers" href="#chantiers"><span class="icon">🏗</span>Chantiers</a></li>
+        <li><a class="nav-item" data-section="habilitations" href="#habilitations"><span class="icon">🎓</span>Habilitations</a></li>
+        <li><a class="nav-item" data-section="contacts" href="#contacts"><span class="icon">📞</span>Contacts / Urgences</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <strong>Établi par :</strong><br>
+      LENAXIS / SECURE<br>
+      David MUSEUR — Consultant HSE<br><br>
+      Date : 27 mai 2026<br>
+      Version 1
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <!-- ACCUEIL -->
+    <section id="section-accueil" class="section active">
+      <div class="page-header">
+        <h1>Tableau de bord HSE</h1>
+        <div class="breadcrumb">Accueil — synthèse opérationnelle de la situation HSE d'IM2S au 27 mai 2026</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-title">🚨 ALERTE CRITIQUE — Paradoxe « travail en hauteur » à corriger</div>
+        Le diagnostic Risqapp du 19/05/2026 répond NON à la question « Travailleurs en hauteur ? », en contradiction flagrante avec le devis Sérigraphie Moderne (voûtes Arcadef GD 2,80 m en toiture). Ce risque nié expose le gérant à une <strong>reconnaissance de faute inexcusable</strong> en cas d'accident. À corriger formellement dans tout document interne (voir DUERP v2.2 ULTIME §1.1, fiche FR-01).
+      </div>
+
+      <div class="alert warning">
+        <div class="alert-title">⚠️ 4 actions IMMÉDIATES (< 7 jours)</div>
+        <ol style="margin:8px 0 0 24px;">
+          <li>Correction du paradoxe travail en hauteur dans le diagnostic Risqapp.</li>
+          <li>Interdiction d'accès aux installations électriques pour les 3 salariés non habilités.</li>
+          <li>Programmation des formations habilitations électriques (sous 30 jours).</li>
+          <li>Vérification générale annuelle des EPI antichute.</li>
+        </ol>
+      </div>
+
+      <h2 style="color:var(--red);font-size:22px;margin:24px 0 12px;">Indicateurs synthétiques</h2>
+      <div class="grid grid-4" id="kpi-grid"></div>
+
+      <div class="card mt-4">
+        <h2>Navigation rapide</h2>
+        <div class="grid grid-3">
+          <a class="btn btn-outline" data-section="duerp" onclick="document.querySelector('[data-section=duerp]').click(); return false;">📋 DUERP v2.2 ULTIME (télécharger)</a>
+          <a class="btn btn-outline" data-section="risques" onclick="document.querySelector('[data-section=risques]').click(); return false;">⚠️ 25 fiches de risque</a>
+          <a class="btn btn-outline" data-section="plan" onclick="document.querySelector('[data-section=plan]').click(); return false;">🎯 21 actions priorisées</a>
+          <a class="btn btn-outline" data-section="biblio" onclick="document.querySelector('[data-section=biblio]').click(); return false;">📁 Bibliothèque (7 docs)</a>
+          <a class="btn btn-outline" data-section="audit" onclick="document.querySelector('[data-section=audit]').click(); return false;">✅ Audit interactif (45 Q)</a>
+          <a class="btn btn-outline" data-section="contacts" onclick="document.querySelector('[data-section=contacts]').click(); return false;">📞 Numéros d'urgence</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIÉTÉ -->
+    <section id="section-societe" class="section">
+      <div class="page-header">
+        <h1>Société</h1>
+        <div class="breadcrumb">Identité juridique, structure, certifications, marque employeur</div>
+      </div>
+
+      <div class="card">
+        <h2>Identité juridique</h2>
+        <div class="table-wrap" style="box-shadow:none;">
+          <table>
+            <tbody>
+              <tr><td><strong>Dénomination officielle</strong></td><td>INSTALLATION MAINTENANCE DE SYSTÈME DE SÉCURITÉ ET PROTECTION INCENDIE</td></tr>
+              <tr><td><strong>Sigle</strong></td><td>IM2S PROTECTION INCENDIE</td></tr>
+              <tr><td><strong>Forme juridique</strong></td><td>SARL à associé unique (EURL) au capital de 100 000 €</td></tr>
+              <tr><td><strong>SIREN</strong></td><td>504 180 365</td></tr>
+              <tr><td><strong>SIRET siège actif</strong></td><td>504 180 365 00034 (Astrae Center, créé 01/09/2022)</td></tr>
+              <tr><td><strong>SIRETs fermés</strong></td><td>00018 (ZI Les Nertières), 00026 (Espace La Gaude)</td></tr>
+              <tr><td><strong>Date création</strong></td><td>05/06/2008 (immatriculation initiale)</td></tr>
+              <tr><td><strong>Code NAF</strong></td><td>4321A — Travaux d'installation électrique dans tous locaux</td></tr>
+              <tr><td><strong>Adresse</strong></td><td>Astrae Center, 235 Allée Hector Pintus, 06610 LA GAUDE</td></tr>
+              <tr><td><strong>Téléphone</strong></td><td>04 93 58 75 38</td></tr>
+              <tr><td><strong>Site web</strong></td><td><a href="https://www.im2s.fr" target="_blank" style="color:#A00D1A;">https://www.im2s.fr</a> · <a href="https://www.im2s.mc" target="_blank" style="color:#A00D1A;">.mc (Monaco)</a></td></tr>
+              <tr><td><strong>Gérant / Associé unique</strong></td><td>M. Stéphane KNOLL</td></tr>
+              <tr><td><strong>Effectif au 26/03/2026</strong></td><td><strong>18 collaborateurs</strong> (13 hommes + 5 femmes, dont 1 longue maladie) — vers 19 avec recrutements en cours</td></tr>
+              <tr><td><strong>Effectif moyen 2022 (comptes sociaux)</strong></td><td>14 ETP (10 ouvriers + 4 employés)</td></tr>
+              <tr><td><strong>Convention collective ouvriers</strong></td><td>IDCC 1597 — BTP > 10 salariés</td></tr>
+              <tr><td><strong>Convention collective ETAM</strong></td><td>IDCC 2609 — ETAM du Bâtiment</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Certifications et qualifications</h2>
+        <ul>
+          <li><strong>Qualibat n°80634</strong> — Qualification générale Qualibat (marchés publics, confiance donneurs d'ordre)</li>
+          <li><strong>Qualibat n°5442</strong> — Qualification spécifique « Désenfumage naturel »</li>
+          <li><strong>Référentiel APSAD R6</strong> — Utilisé pour les formations EPI dispensées aux clients (simulateurs BullsEye™ VR)</li>
+          <li><strong>Distributeur officiel ANDRIEU</strong> — Fabricant français d'extincteurs (NF)</li>
+          <li><strong>NF S 61-932 à 934, 970</strong> — Normes d'installation/maintenance SSI applicables</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Marque employeur — éléments positifs</h2>
+        <ul>
+          <li>🎙 <strong>Podcast interne « IM2S Protection Incendie MORNING »</strong> — diffusé sur Apple Podcasts, Spotify, Podcastics. Animé par les salariés. Atout de prévention RPS (lutte contre l'isolement, cohésion).</li>
+          <li>⭐ <strong>Note 5/5 sur GoWork</strong> — avis employeur exceptionnels.</li>
+          <li>📓 <strong>Cahier de doléances</strong> ouvert aux salariés (confirmé CR 19/01) — remontée de signaux faibles.</li>
+          <li>👷 <strong>Charte EPI signée</strong> par les nouveaux entrants — bonne pratique.</li>
+          <li>📐 <strong>Méthodologie propriétaire « PRIMO »</strong> — outil interne d'audit des obligations réglementaires clients.</li>
+          <li>📜 <strong>Devis Sérigraphie Moderne</strong> — clauses amiante et co-activité exemplaires (maturité contractuelle élevée).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Données financières 2022 (capacité d'investissement HSE)</h2>
+        <div class="grid grid-4">
+          <div class="kpi-card green"><div class="label">CA 2022</div><div class="value">1,65 M€</div><div class="sublabel">Produits d'exploitation</div></div>
+          <div class="kpi-card green"><div class="label">Bénéfice net</div><div class="value">158 k€</div><div class="sublabel">Marge ~9,6 %</div></div>
+          <div class="kpi-card green"><div class="label">Report à nouveau</div><div class="value">647 k€</div><div class="sublabel">Capitaux propres solides</div></div>
+          <div class="kpi-card"><div class="label">Immobilisations corp.</div><div class="value">394 k€</div><div class="sublabel">Dont 203 k€ matériel transport</div></div>
+        </div>
+        <div class="alert success mt-2">
+          <div class="alert-title">✓ Conséquence opérationnelle HSE</div>
+          Aucune restriction budgétaire ne saurait entraver la mise en œuvre du plan d'action de prévention.
+        </div>
+      </div>
+    </section>
+
+    <!-- DUERP -->
+    <section id="section-duerp" class="section">
+      <div class="page-header">
+        <h1>DUERP — Édition courante</h1>
+        <div class="breadcrumb">Document Unique d'Évaluation des Risques Professionnels — version 2.2 ULTIME du 27/05/2026</div>
+      </div>
+
+      <div class="alert info">
+        <div class="alert-title">📋 DUERP version 1.1 — cosigné LENAXIS / SECURE</div>
+        Édition <strong>v2.0 FINALE</strong> (~110 pages) intégrant l'ensemble des sources : DU 2015, DU Riskattitude 2016, CR entretien 19/01/2026, diagnostic Risqapp 19/05/2026, <strong>retranscriptions audio complètes de la réunion du 26/03/2026</strong>, photos visite, rapport documentaire IA, comptes sociaux 2022/2024, actes 2022. <strong>Données actualisées</strong> : effectif 18 collaborateurs (13 H + 5 F), tablette L'Enaxie formalisée, REX SÉRIGRAPHIE MODERNE, approche RPS empirique. Opposabilité renforcée par la cosignature consultant externe.
+      </div>
+
+      <div class="card">
+        <h2>Contenu de l'édition v1.1</h2>
+        <ul>
+          <li>Partie 1 — Présentation de l'entreprise (identité EURL corrigée, certifications, marque employeur, financier)</li>
+          <li>Partie 2 — Méthodologie d'évaluation (cotation Gravité × Fréquence × Maîtrise)</li>
+          <li>Partie 3 — 6 Unités de Travail (effectifs et activités détaillés)</li>
+          <li>Partie 4 — Synthèse globale et alertes critiques (paradoxe travail en hauteur)</li>
+          <li>Partie 5 — 25 fiches de risque détaillées (FR-01 à FR-25 — 11 familles)</li>
+          <li>Partie 6 — Plan d'action priorisé (21 actions IMMÉDIAT / 30j / 3m / 6m / 12m)</li>
+          <li>Partie 7 — Indicateurs de pilotage HSE</li>
+          <li>Partie 8 — Pièces probantes</li>
+          <li>Partie 9 — 6 attestations détachables (EPI, habilitations, CACES, accueil, carte BTP, SST)</li>
+          <li>Partie 10 — Annexes méthodologiques</li>
+          <li><strong>Annexe A — Historique consolidé 2015 → 2016 → 2026 (chronologie + matrice 2015 G/F intégrale 13 p.)</strong></li>
+        </ul>
+        <div class="text-center mt-2">
+          <a href="assets/docs/DUERP_IM2S_v2_2_ULTIME.docx" class="btn" download>
+            📥 Télécharger le DUERP v2.2 ULTIME (DOCX, 85 Ko)
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Sources analysées dans cette édition</h2>
+        <ol>
+          <li>DU SARL IM2S — matrice G/F 13 p. (Riskattitude, 07/12/2015)</li>
+          <li>Document_unique_IM2S.pdf — DUERP 44 p. (Riskattitude, 01/02/2016, note 14,46/20)</li>
+          <li>CR entretien 19/01/2026 (Riskattitude / IM2S)</li>
+          <li>JSON 839 risques (export Riskattitude, audit 26/03/2026 non finalisé)</li>
+          <li>Diagnostic Risqapp/SecureMetrix 52 p. (19/05/2026, note 53/100)</li>
+          <li>Diagnostic DUE 2026 — mise à jour Word (rapport 27/05/2026)</li>
+          <li><strong>Retranscriptions audio complètes de la réunion du 26/03/2026</strong> (durée &gt; 1h)</li>
+          <li><strong>24 photographies de la visite</strong> du 26/03/2026 (note de synthèse séparée)</li>
+          <li>Rapport documentaire IA tierce (Pappers, INSEE, BODACC, comptes sociaux, presse, podcast)</li>
+          <li>Extrait Pappers à jour 26/05/2026</li>
+          <li>Comptes sociaux 2024 + 2022 (greffe)</li>
+          <li>Actes 13/09/2022 (création SIRET 00034)</li>
+          <li>BODACC C 27/02/2024</li>
+          <li>Devis Sérigraphie Moderne SAS (chantier de référence)</li>
+          <li>Plan de prévention IM2S — canevas Riskattitude vide</li>
+          <li>Logo officiel IM2S (charte rouge #A00D1A / gris #5A5B5C)</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Conservation</h2>
+        <p>Conformément à l'<strong>Art. L.4121-3-1 du Code du travail</strong>, le DUERP et l'ensemble des versions historiques doivent être conservés pendant <strong>40 ans</strong>. La bibliothèque documentaire de cette plateforme assure cette conservation pour les versions à date.</p>
+      </div>
+    </section>
+
+    <!-- BIBLIOTHÈQUE -->
+    <section id="section-biblio" class="section">
+      <div class="page-header">
+        <h1>Bibliothèque documentaire</h1>
+        <div class="breadcrumb">Tous les documents HSE — téléchargement individuel</div>
+      </div>
+      <div id="biblio-content"></div>
+    </section>
+
+    <!-- RISQUES -->
+    <section id="section-risques" class="section">
+      <div class="page-header">
+        <h1>Cartographie des risques</h1>
+        <div class="breadcrumb">25 fiches de risque détaillées — 11 familles</div>
+      </div>
+      <div id="risques-content"></div>
+    </section>
+
+    <!-- PLAN D'ACTION -->
+    <section id="section-plan" class="section">
+      <div class="page-header">
+        <h1>Plan d'action priorisé</h1>
+        <div class="breadcrumb">21 actions concrètes — IMMÉDIAT, 30j, 3m, 6m, 12m</div>
+      </div>
+      <div id="plan-content"></div>
+    </section>
+
+    <!-- KPI -->
+    <section id="section-kpi" class="section">
+      <div class="page-header">
+        <h1>Indicateurs HSE</h1>
+        <div class="breadcrumb">Tableau de bord des indicateurs de pilotage</div>
+      </div>
+      <div class="card">
+        <h2>Indicateurs synthétiques actuels</h2>
+        <div class="grid grid-4" id="kpi-grid-2">
+          <!-- même contenu que accueil -->
+        </div>
+      </div>
+      <div class="card">
+        <h2>Indicateurs à suivre annuellement</h2>
+        <div class="table-wrap" style="box-shadow:none;">
+          <table>
+            <thead>
+              <tr><th>Indicateur</th><th>Cible</th><th>Périodicité</th><th>Source</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Habilitations électriques en cours de validité</td><td>100 %</td><td>Trimestrielle</td><td>Tableau habilitations</td></tr>
+              <tr><td>Nb de SST formés</td><td>≥ 2 / 14 ETP</td><td>Annuelle</td><td>Registre formations</td></tr>
+              <tr><td>Causeries sécurité</td><td>≥ 6 / an</td><td>Trimestrielle</td><td>CR causeries</td></tr>
+              <tr><td>Exercices d'évacuation siège</td><td>≥ 2 / an</td><td>Annuelle</td><td>CR exercices</td></tr>
+              <tr><td>Taux de salariés formés PRAP</td><td>100 % UT2-3-4-5</td><td>Semestrielle</td><td>Attestations PRAP</td></tr>
+              <tr><td>Permis de feu délivrés</td><td>100 % points chauds</td><td>Trimestrielle</td><td>Registre chantiers</td></tr>
+              <tr><td>Plans de prévention signés</td><td>100 % > 400h ou TD</td><td>Trimestrielle</td><td>Registre PdP</td></tr>
+              <tr><td>Cartes BTP valides</td><td>100 %</td><td>Trimestrielle</td><td>Tableau RH</td></tr>
+              <tr><td>Taux de fréquence AT (TF)</td><td>&lt; moy. NAF 43.21A</td><td>Annuelle</td><td>CARSAT</td></tr>
+              <tr><td>Taux de gravité AT (TG)</td><td>&lt; moy. NAF 43.21A</td><td>Annuelle</td><td>CARSAT</td></tr>
+              <tr><td>Presque-accidents remontés</td><td>≥ 6 / an</td><td>Mensuelle</td><td>Registre HS</td></tr>
+              <tr><td>Visites médicales à jour</td><td>100 %</td><td>Trimestrielle</td><td>Service Santé Travail</td></tr>
+              <tr><td>Budget HSE alloué</td><td>≥ 1 % masse sal.</td><td>Annuelle</td><td>Comptabilité</td></tr>
+              <tr><td>Habilitations SS4 amiante</td><td>100 % techniciens</td><td>Annuelle</td><td>Tableau habilitations</td></tr>
+              <tr><td>Q18 / Q19 levés dans les 3 mois</td><td>100 %</td><td>Annuelle</td><td>Rapports vérif.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIT -->
+    <section id="section-audit" class="section">
+      <div class="page-header">
+        <h1>Audit interactif</h1>
+        <div class="breadcrumb">45 questions clés — réponses sauvegardées dans votre navigateur</div>
+      </div>
+      <div id="audit-content"></div>
+    </section>
+
+    <!-- CHANTIERS -->
+    <section id="section-chantiers" class="section">
+      <div class="page-header">
+        <h1>Chantiers</h1>
+        <div class="breadcrumb">Carnet de chantiers + cartographie</div>
+      </div>
+      <div id="chantiers-content"></div>
+    </section>
+
+    <!-- HABILITATIONS -->
+    <section id="section-habilitations" class="section">
+      <div class="page-header">
+        <h1>Habilitations</h1>
+        <div class="breadcrumb">Tableau de bord nominatif — électriques, CACES, SST, PRAP, SS4, Carte BTP</div>
+      </div>
+      <div id="habilitations-content"></div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="section-contacts" class="section">
+      <div class="page-header">
+        <h1>Contacts / Urgences</h1>
+        <div class="breadcrumb">Numéros d'urgence, autorités HSE, contacts internes</div>
+      </div>
+      <div id="contacts-content"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <strong>Plateforme HSE IM2S Protection Incendie</strong> — Édition 2026 v2.2 ULTIME<br>
+      Établie par LENAXIS / SECURE — David MUSEUR — 27 mai 2026<br>
+      <em>Site statique — données locales — pas de tracking — RGPD-compatible</em>
+    </footer>
+
+  </main>
+
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+
+</body>
+</html>
